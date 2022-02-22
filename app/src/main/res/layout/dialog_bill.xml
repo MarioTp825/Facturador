@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvBillNumberDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="No.1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvBillSeriesDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="0A"
+        app:layout_constraintTop_toBottomOf="@id/tvBillNumberDialog"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvLblBillNitDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIT:"
+        app:layout_constraintTop_toBottomOf="@id/tvBillSeriesDialog"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvLblBillNameDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        app:layout_constraintTop_toBottomOf="@id/tvLblBillNitDialog"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvBillNitDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="660448-K"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toTopOf="@id/tvLblBillNitDialog"
+        app:layout_constraintStart_toEndOf="@id/tvLblBillNitDialog"/>
+    <TextView
+        android:id="@+id/tvBillNameDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Nombre Apellido"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toTopOf="@id/tvLblBillNameDialog"
+        app:layout_constraintStart_toEndOf="@id/tvLblBillNameDialog"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBillProductsDialog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tvBillNameDialog"
+        app:layout_constraintBottom_toTopOf="@id/vTotal"/>
+
+    <View
+        android:id="@+id/vTotal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/design_default_color_primary"
+        app:layout_constraintBottom_toTopOf="@id/tvBillTotalDialog"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:id="@+id/tvBillTotalDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tvAddBillTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Q.100.00"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

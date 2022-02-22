@@ -1,0 +1,136 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:178492857237253385",
+      "lastPropertyId": "4:9069762802227942048",
+      "name": "Product",
+      "properties": [
+        {
+          "id": "1:6065851118236766695",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5504148472453228331",
+          "name": "Name",
+          "type": 9
+        },
+        {
+          "id": "3:1847174771423216995",
+          "name": "Category",
+          "type": 5
+        },
+        {
+          "id": "4:9069762802227942048",
+          "name": "price",
+          "type": 7
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:2173490424964608456",
+      "lastPropertyId": "3:5889522639018885719",
+      "name": "BillBody",
+      "properties": [
+        {
+          "id": "1:7918286589898540166",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4368713078237059376",
+          "name": "quantity",
+          "type": 3
+        },
+        {
+          "id": "3:5889522639018885719",
+          "name": "productId",
+          "indexId": "1:3288037412317540776",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "Product"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:5991762162693141697",
+      "lastPropertyId": "6:7706396658875428451",
+      "name": "BillHeader",
+      "properties": [
+        {
+          "id": "1:8938914685397701243",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6223888958382020930",
+          "name": "nit",
+          "type": 9
+        },
+        {
+          "id": "3:8173740478112107496",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:1886608307033565531",
+          "name": "series",
+          "type": 9
+        },
+        {
+          "id": "5:5871175365746165909",
+          "name": "billNumber",
+          "type": 9
+        },
+        {
+          "id": "6:7706396658875428451",
+          "name": "bodyId",
+          "indexId": "2:5688648622765129629",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "BillHolder"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:7667552092572802597",
+      "lastPropertyId": "1:654756365057724574",
+      "name": "BillHolder",
+      "properties": [
+        {
+          "id": "1:654756365057724574",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:5837928091910483027",
+          "name": "list",
+          "targetId": "2:2173490424964608456"
+        }
+      ]
+    }
+  ],
+  "lastEntityId": "4:7667552092572802597",
+  "lastIndexId": "2:5688648622765129629",
+  "lastRelationId": "1:5837928091910483027",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

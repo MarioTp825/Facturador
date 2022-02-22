@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/addBillFragment">
+    <fragment
+        android:id="@+id/addProduct"
+        android:name="com.caexlogistics.facturador.view.fragment.AddProduct"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/addBillFragment"
+        android:name="com.caexlogistics.facturador.view.fragment.bills.AddBillFragment"
+        android:label="fragment_add_bill"
+        tools:layout="@layout/fragment_add_bill" />
+    <fragment
+        android:id="@+id/readBillFragment"
+        android:name="com.caexlogistics.facturador.view.fragment.bills.ReadBillFragment"
+        android:label="fragment_read_bill"
+        tools:layout="@layout/fragment_read_bill" />
+</navigation>
